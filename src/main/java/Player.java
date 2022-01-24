@@ -5,12 +5,13 @@ public abstract class Player {
     private String name;
 
     public Player(String name){
-
+        this.name = name;
     }
+    //encapsulation - setter
 
     public String getName(){
         return name;
     }
-
+    //encapsulation - getter
 
 }
