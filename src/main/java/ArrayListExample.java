@@ -20,9 +20,23 @@ public class ArrayListExample {
 
         //BELOW: is if we were not to add <Integer> after <ArrayList> in the definition above and also
         //in the method definition here
-//        for(Object i : items){ //Because ArrayList accepts objects, not integer
-//            System.out.println((Integer) i * 2); //You have to put Integer because i is an object
-                    // and you can't multiply an object
+
+        //RULE:
+        // There is Integer in the List and you can't multiply that
+        // Since it is not primitive
+        // So either put Object + Integer or just "int" to case (Look below)
+
+        //NOT ALLOWED
+
+//        for(i : item){
+//            System.out.println(i*2);
+//        }
+
+        //ALLOWED
+
+//        for(Object i : items){
+//            System.out.println((Integer) i * 2);
+
 
         for (int i:items){
             System.out.println(i*2);
