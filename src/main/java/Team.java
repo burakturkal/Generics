@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
-public class Team<T extends Player> {
-    //<T> says make a type checking
+public class Team<T extends SoccerPlayer> { //CALLED: TYPE SAFETY :: Player class doesn't have it f.e.
+    //<T> makes a type checking
     //we used extends to make sure that it doesn't take just ANY type
     //It must be from Player class
 
@@ -9,7 +9,7 @@ public class Team<T extends Player> {
 
     private ArrayList<T> members = new ArrayList<>();
 
-    public Team(String name){
+    public Team(String name){ //constructor
         this.name = name;
         //this represents the object you create. because you can have multiple objects and they will have
         //different names. That's why we use this, because we don't know its/their name/s
@@ -21,18 +21,18 @@ public class Team<T extends Player> {
 
     public boolean addPlayer(T player){
         if(members.contains(player)){
-            System.out.println(((Player)player).getName() + " is already on this team");
+            System.out.println(player.getName() + " is already on this team");
             //you have to do casting here because you used T
             return false;
         }else{
             members.add(player);
-            System.out.println(((Player)player).getName() + " picked for team " + this.name);
+            System.out.println(player.getName() + " picked for team " + this.name);
             return true;
         }
     }
 
-    public int numPlayers(){
+    public int numPlayers(){ //method to get get the team size
 
-        return this.members.size();
+        return this.members.size(); //refers to ArrayList.size()
     }
 }

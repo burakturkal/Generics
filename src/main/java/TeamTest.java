@@ -20,7 +20,7 @@ public class TeamTest {
 
         Team<SoccerPlayer> liverpool = new Team<>("Liverpool");
 
-//        Team<String> brokenTEam = new Team<>("thi won't work");
+//        Team<String> brokenTEam = new Team<>("this won't work");
         //Team.java line 3 forbids this line execution
 
 //        liverpool.addPlayer(joe); //gives an error because joe is not a SoccerPlayer
