@@ -14,6 +14,6 @@ public abstract class Player {
         return name;
     }
     //encapsulation - getter
-
+    //
 }
 
